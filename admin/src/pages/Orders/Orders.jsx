@@ -36,7 +36,7 @@ const Orders = ({url}) => {
 
     return (
         <div className='order add'>
-            <h1>Orders Page</h1>
+            <h1>Manage All Orders</h1>
             <div className="order-list">
                 {orders.map((order, index) => (
                     <div key={index} className='order-item'>

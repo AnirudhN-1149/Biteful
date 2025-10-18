@@ -7,7 +7,11 @@ const Cart = () => {
 
     const { cartItems, food_list, removeFromCart, getTotalCartAmount, url } = useContext(StoreContext);
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
+    const totalItems = Object.values(cartItems).reduce((total, quantity) => total + quantity, 0);
+
+    const deliveryFee = totalItems * 10;
 
     return (
         <div className='cart'>
@@ -51,12 +55,12 @@ const Cart = () => {
                         <hr />
                         <div className="cart-total-details">
                             <p>Delivery Fee</p>
-                            <p>₹{getTotalCartAmount() === 0?0:2}</p>
+                            <p>₹{deliveryFee}</p>
                         </div>
                         <hr />
                         <div className="cart-total-details">
                             <b>Total</b>
-                            <b>₹{getTotalCartAmount() === 0?0:getTotalCartAmount() + 2}</b>
+                            <b>₹{getTotalCartAmount() + deliveryFee}</b>
                         </div>
                     </div>
                     <button onClick={() => navigate("/order")}>PROCEED TO CHECKOUT</button>

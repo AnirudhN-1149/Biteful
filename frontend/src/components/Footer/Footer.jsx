@@ -8,7 +8,7 @@ const Footer = () => {
             <div className='footer-content'>
                 <div className="footer-content-left">
                     <img src={assets.logo} alt="" />
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam officia reiciendis eligendi nesciunt esse distinctio minus expedita blanditiis temporibus atque.</p>
+                    <p>Biteful makes ordering food a breeze—just a few taps and your cravings are satisfied. From local favorites to global bites, let Biteful bring the flavor to your door!</p>
                     <div className="footer-social-icons">
                         <img src={assets.facebook_icon} alt="" />
                         <img src={assets.twitter_icon} alt="" />

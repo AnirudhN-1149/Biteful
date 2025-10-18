@@ -1,0 +1,39 @@
+.home h1 {
+    margin-bottom: 30px;
+}
+
+.home p {
+    margin-bottom: 40px;
+}
+
+.home-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.admin-options {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid tomato;
+    border-radius: 4px;
+}
+
+.admin-options h3 {
+    color: black;
+    margin-bottom: 20px;
+}
+
+.admin-options p {
+    color: #454545;
+    margin-bottom: 20px;
+}
+
+.admin-options button {
+    padding: 10px;
+    background-color: #fff4f2;
+    color: tomato;
+    border: 1px solid tomato;
+    border-radius: 4px;
+    cursor: pointer;
+}
