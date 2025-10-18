@@ -8,6 +8,8 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
 // placing user order from frontend
 const placeOrder = async (req, res) => {
+
+    const totalQuantity = req.body.items.reduce((total, item) => total + item.quantity, 0);
     
     try {
         const newOrder = new orderModel({
@@ -36,9 +38,9 @@ const placeOrder = async (req, res) => {
                 product_data: {
                     name: "Delivery Charges"
                 },
-                unit_amount: 2 * 100
+                unit_amount: 10 * 100
             },
-            quantity: 1
+            quantity: totalQuantity
         })
 
         const session = await stripe.checkout.sessions.create({
