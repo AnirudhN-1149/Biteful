@@ -1,9 +1,12 @@
 .header {
     height: 34vw;
+    min-height: 400px;
+    max-height: 500px;
     margin: 30px auto;
-    background: url('/header_img.png') no-repeat;
-    background-size: contain;
+    background: url('/header_img.png') no-repeat center center;
+    background-size: cover;
     position: relative;
+    border-radius: 10px;
 }
 
 .header-contents {
@@ -26,7 +29,7 @@
 
 .header-contents p {
     color: white;
-    font-size: 1vw;
+    font-size: max(1vw, 14px);
 }
 
 .header-contents a {
@@ -43,20 +46,35 @@
     color: tomato;
 }
 
-@media (max-widht: 1050px) {
+@media (max-width: 1050px) {
     .header-contents {
         max-width: 45%;
     }
+    .header {
+        min-height: 350px;
+    }
 }
 
-@media (max-widht: 750px) {
+@media (max-width: 750px) {
+    .header {
+        height: auto;
+        min-height: 300px;
+        margin: 20px auto;
+    }
     .header-contents {
-        max-width: 65%;
+        max-width: 80%;
+        gap: 1vw;
+        bottom: 8%;
+        left: 5vw;
+    }
+    .header-contents h2 {
+        font-size: max(6vw, 20px);
     }
     .header-contents p {
         display: none;
     }
-    .header-contents button {
+    .header-contents a {
         padding: 2vw 4vw;
+        font-size: 14px;
     }
 }
