@@ -27,7 +27,7 @@ const Footer = () => {
                 <div className="footer-content-right">
                     <h2>GET IN TOUCH</h2>
                     <ul>
-                        <li>+91 80555 90444</li>
+                        <li>+91 12345 12345</li>
                         <li>contact@Biteful.com</li>
                     </ul>
                 </div>
