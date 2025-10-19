@@ -79,7 +79,7 @@
 
 @media (max-width: 400px) {
     .list-table-format {
-        grid-template-columns: 0.8fr 2fr 0.5fr;
+        grid-template-columns: 0.8fr 1.5fr 0.5fr 0.5fr;
         gap: 6px;
         padding: 10px 5px;
     }
