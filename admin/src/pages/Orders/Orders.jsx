@@ -6,7 +6,9 @@ import { useEffect } from 'react'
 import axios from 'axios'
 import { assets } from '../../assets/assets'
 
-const Orders = ({url}) => {
+const Orders = () => {
+
+    const url = import.meta.env.VITE_API_URL || "http://localhost:4000";
 
     const [orders, setOrders] = useState([]);
 
