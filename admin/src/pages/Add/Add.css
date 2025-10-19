@@ -18,6 +18,8 @@
 
 .add-image-upload img {
     width: 180px;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .add-product-name,
@@ -28,10 +30,20 @@
 .add-product-name input,
 .add-product-description textarea {
     padding: 10px;
+    border: 1px solid #c9c9c9;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.add-product-name input:focus,
+.add-product-description textarea:focus {
+    outline: none;
+    border-color: tomato;
 }
 
 .add-product-description textarea {
     height: 100px;
+    resize: vertical;
 }
 
 .add-category-price {
@@ -43,6 +55,8 @@
 .add-category-price input {
     max-width: 120px;
     padding: 10px;
+    border: 1px solid #c9c9c9;
+    border-radius: 4px;
 }
 
 .add-btn {
@@ -52,4 +66,57 @@
     background-color: black;
     color: white;
     cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.add-btn:hover {
+    background-color: tomato;
+}
+
+@media (max-width: 900px) {
+    .add {
+        width: 85%;
+        margin-left: 3vw;
+    }
+}
+
+@media (max-width: 750px) {
+    .add {
+        width: 95%;
+        margin: 20px auto 100px auto;
+        padding: 0 10px;
+    }
+    .add h1 {
+        font-size: 22px;
+    }
+    .add-image-upload img {
+        width: 140px;
+    }
+    .add-product-name,
+    .add-product-description {
+        width: 100%;
+    }
+    .add-category-price {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .add-category-price select,
+    .add-category-price input {
+        max-width: 100%;
+        width: 100%;
+    }
+    .add-btn {
+        max-width: 100%;
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+    .add,
+    .list,
+    .order,
+    .home {
+        margin-bottom: 100px;
+        padding-bottom: 20px;
+    }
 }
