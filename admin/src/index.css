@@ -35,6 +35,13 @@ hr {
 }
 
 .cursor {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
+}
+
+@media (max-width: 750px) {
+    .app-content {
+        flex-direction: column;
+    }
 }
