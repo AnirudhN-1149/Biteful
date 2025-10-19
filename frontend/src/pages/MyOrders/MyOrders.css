@@ -2,6 +2,11 @@
     margin: 20px 0;
 }
 
+.my-orders h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
 .my-orders .container {
     display: flex;
     flex-direction: column;
@@ -18,6 +23,7 @@
     padding: 10px 20px;
     color: #454545;
     border: 1px solid tomato;
+    border-radius: 8px;
 }
 
 .my-orders-order img {
@@ -40,16 +46,58 @@
     background-color: #ffe1e1;
     cursor: pointer;
     color: #454545;
+    transition: 0.3s;
+}
+.my-orders-order button:hover {
+    background-color: tomato;
+    color: white;
 }
 
 @media (max-width: 900px) {
     .my-orders-order {
         grid-template-columns: 1fr 2fr 1fr;
-        row-gap: 5px;
+        row-gap: 10px;
+        gap: 15px;
         font-size: 12px;
+        padding: 15px;
     }
-
+    .my-orders-order img {
+        width: 40px;
+    }
     .my-orders-order button {
-        font-size: 10px;
+        font-size: 11px;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .my-orders {
+        margin: 10px 0;
+    }
+    .my-orders h2 {
+        font-size: 20px;
+    }
+    .my-orders .container {
+        gap: 15px;
+        margin-top: 20px;
+    }
+    .my-orders-order {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 15px;
+        font-size: 13px;
+    }
+    .my-orders-order img {
+        width: 35px;
+        justify-self: center;
+    }
+    .my-orders-order p {
+        word-wrap: break-word;
+        line-height: 1.4;
+    }
+    .my-orders-order button {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 14px;
     }
 }
