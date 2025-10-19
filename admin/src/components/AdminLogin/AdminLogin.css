@@ -3,14 +3,17 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: tomato
+    background: tomato;
+    padding: 20px;
 }
 
 .login-form {
     max-width: 400px;
+    width: 100%;
     background-color: white;
     padding: 40px;
     border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .login-form img {
@@ -49,4 +52,30 @@
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-form button:hover {
+    background: #ff4d4d;
+}
+
+@media (max-width: 480px) {
+    .login-form {
+        padding: 30px 20px;
+    }
+    .login-form img {
+        width: 120px;
+    }
+    .login-form h1 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    .login-form input {
+        padding: 12px;
+        font-size: 14px;
+    }
+    .login-form button {
+        padding: 12px;
+        font-size: 15px;
+    }
 }
