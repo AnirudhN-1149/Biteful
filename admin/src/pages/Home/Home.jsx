@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <div className='home add'>
             <h1>Admin Panel</h1>
-            <p>Your all-in-one dashboard to manage orders, update statuses, and spice up the menu with new tasty additions!</p>
+            <p className='desc'>Your all-in-one dashboard to manage orders, update statuses, and spice up the menu with new tasty additions!</p>
             <div className='home-content'>
                 <div className="admin-options">
                     <h3>Manage All Orders</h3>
