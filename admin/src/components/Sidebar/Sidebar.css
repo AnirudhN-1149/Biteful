@@ -1,0 +1,95 @@
+.sidebar {
+    width: 18%;
+    min-height: 100vh;
+    border: 1.5px solid #a9a9a9;
+    border-top: 0;
+    font-size: max(1vw, 10px);
+}
+
+.sidebar-options {
+    padding-top: 50px;
+    padding-left: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #a9a9a9;
+    border-right: 0;
+    padding: 8px 10px;
+    border-radius: 3px 0 0 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar-option.active {
+    background-color: #fff0ed;
+    border-color: tomato;
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        width: 80px;
+    }
+    .sidebar-options {
+        padding-left: 10%;
+    }
+    .sidebar-option {
+        justify-content: center;
+        padding: 12px 8px;
+    }
+    .sidebar-option p {
+        display: none;
+    }
+    .sidebar-option img {
+        width: 24px;
+    }
+}
+
+@media (max-width: 750px) {
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        border: none;
+        border-top: 1.5px solid #a9a9a9;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: white;
+        z-index: 100;
+    }
+    .sidebar-options {
+        padding: 0;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 12px 0;
+        gap: 0;
+    }
+    .sidebar-option {
+        flex-direction: column;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 16px;
+        gap: 5px;
+        flex: 1;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .sidebar-option p {
+        display: block;
+        font-size: 11px;
+        text-align: center;
+    }
+    .sidebar-option img {
+        width: 22px;
+    }
+    .sidebar-option.active {
+        background-color: #fff0ed;
+        border-radius: 8px;
+    }
+}

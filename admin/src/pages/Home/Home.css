@@ -1,0 +1,100 @@
+.home h1 {
+    margin-bottom: 30px;
+}
+
+.home p {
+    margin-bottom: 40px;
+}
+
+.home-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.admin-options {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid tomato;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.admin-options:hover {
+    box-shadow: 0 4px 15px rgba(255, 99, 71, 0.2);
+}
+
+.admin-options h3 {
+    color: black;
+    margin-bottom: 20px;
+}
+
+.admin-options p {
+    color: #454545;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.admin-options button {
+    padding: 10px;
+    background-color: #fff4f2;
+    color: tomato;
+    border: 1px solid tomato;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.admin-options button:hover {
+    background-color: tomato;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .home-content {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .admin-options {
+        margin: 15px;
+    }
+}
+
+@media (max-width: 750px) {
+    .home {
+        margin-bottom: 80px;
+    }
+    .home h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .home .desc {
+        font-size: 14px;
+        margin-bottom: 25px;
+        
+    }
+    .admin-options {
+        margin: 10px;
+        padding: 18px;
+    }
+    .admin-options h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .admin-options p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    .admin-options button {
+        width: 100%;
+        padding: 12px;
+    }
+    .add,
+    .list,
+    .order,
+    .home {
+        margin-bottom: 100px;
+        padding-bottom: 20px;
+    }
+}
